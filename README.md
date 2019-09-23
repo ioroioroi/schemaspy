@@ -18,6 +18,8 @@
 2. Run Shell
    - `sh schemaspy.sh`
 
+3. Confirm docs directory
+
 ## !! Caution !!
 docs の適切な権限が不明. とりあえず root の 755 では動かなかったので
 root の 777 に変更したら動いた.
