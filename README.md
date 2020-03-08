@@ -18,11 +18,17 @@
 2. Run Shell
    - `sh schemaspy.sh`
 
-3. Confirm docs directory
+3. Confirm docs directory or use `nginx.sh`
+
+## Note
+
+* Supported MySWL8.x
+  - MySQL8系からMySQLの認証プラグインが mysql_native_password から caching_sha2_password に変わったため /drivers に mysql-connector-java の8系を入れマウントさせることで対応
+  - connector は <https://dev.mysql.com/downloads/connector/j/> よりダウンロード
+  - ref: <https://oki2a24.com/2020/02/02/for-generating-database-document-automatically-add-simple-schemaspy-service-to-docker-compose-yml/>
 
 ## !! Caution !!
-docs の適切な権限が不明. とりあえず root の 755 では動かなかったので
-root の 777 に変更したら動いた.
+docs の適切な権限が不明. とりあえず root の 775 でも動かなかったので root の 777 に変更したら動いた.
 
 ## Issue
 外部参照を張らないとリレーションが見えないが外部参照はあまり張りたくない。  
